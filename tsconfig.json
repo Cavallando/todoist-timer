@@ -7,12 +7,12 @@
     "lib": ["esnext"],
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "views": ["src/views"],
-      "controllers": ["src/controllers"],
-      "app": ["src/app"],
-      "helpers": ["src/helpers"]
+      "views": ["./views"],
+      "controllers": ["./controllers"],
+      "app": ["./app"],
+      "helpers": ["./helpers"]
     }
   },
   "include": ["src/**/*.ts"],
