@@ -23,9 +23,9 @@ export const StartTimerView = async (
       update: {
         user: {
           connectOrCreate: {
-            where: { todoist_id: request.body.context.user.id },
+            where: { todoist_id: `${request.body.context.user.id}` },
             create: {
-              todoist_id: request.body.context.user.id,
+              todoist_id: `${request.body.context.user.id}`,
               email: request.body.context.user.email,
             },
           },
@@ -36,9 +36,9 @@ export const StartTimerView = async (
         started_at: new Date(),
         user: {
           connectOrCreate: {
-            where: { todoist_id: request.body.context.user.id },
+            where: { todoist_id: `${request.body.context.user.id}` },
             create: {
-              todoist_id: request.body.context.user.id,
+              todoist_id: `${request.body.context.user.id}`,
               email: request.body.context.user.email,
             },
           },
