@@ -10,8 +10,27 @@ datasource db {
 model Timer {
   id         Int       @id @default(autoincrement())
   task_id    String    @unique
+
   started_at DateTime
   ended_at   DateTime?
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  user_id    Int
+
+  user User @relation(fields: [user_id], references: [id])
+}
+
+model User {
+  id         Int     @id @default(autoincrement())
+  email      String
+  todoist_id String  @unique
+  timers     Timer[]
+
+  auto_close_task_enabled Boolean @default(true)
+  timer_comments_enabled  Boolean @default(true)
+
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }

@@ -20,6 +20,9 @@ export const StopTimerView = async (
     const existingTimer = await prisma.timer.findUnique({
       where: { task_id: action.params?.sourceId as string },
       rejectOnNotFound: false,
+      include: {
+        user: true,
+      },
     });
 
     if (!existingTimer) {
@@ -32,6 +35,9 @@ export const StopTimerView = async (
         id: existingTimer.id,
       },
       data: { ended_at },
+      include: {
+        user: true,
+      },
     });
 
     const duration = ended_at.getTime() - timer.started_at.getTime();
@@ -44,13 +50,26 @@ export const StopTimerView = async (
       )
     );
 
-    const api = new TodoistApi(token as string);
-    await api.addComment({
-      taskId: timer.task_id,
-      content: `Task was completed in ${humanizeDuration(duration, {
-        round: true,
-      })}`,
-    });
+    // Check for settings so we don't need to reinit the API
+    if (
+      timer.user.auto_close_task_enabled ||
+      timer.user.timer_comments_enabled
+    ) {
+      const api = new TodoistApi(token as string);
+
+      if (timer.user.timer_comments_enabled) {
+        await api.addComment({
+          taskId: timer.task_id,
+          content: `Task was completed in ${humanizeDuration(duration, {
+            round: true,
+          })}`,
+        });
+      }
+
+      if (timer.user.auto_close_task_enabled) {
+        await api.closeTask(timer.task_id);
+      }
+    }
   } catch (error) {
     console.error(error);
     bridges.push(Bridge.notification("error", error.message));

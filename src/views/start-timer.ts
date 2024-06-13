@@ -20,10 +20,29 @@ export const StartTimerView = async (
       where: {
         task_id: action.params.sourceId as string,
       },
-      update: {},
+      update: {
+        user: {
+          connectOrCreate: {
+            where: { todoist_id: request.body.context.user.id },
+            create: {
+              todoist_id: request.body.context.user.id,
+              email: request.body.context.user.email,
+            },
+          },
+        },
+      },
       create: {
         task_id: action.params.sourceId as string,
         started_at: new Date(),
+        user: {
+          connectOrCreate: {
+            where: { todoist_id: request.body.context.user.id },
+            create: {
+              todoist_id: request.body.context.user.id,
+              email: request.body.context.user.email,
+            },
+          },
+        },
       },
     });
 
