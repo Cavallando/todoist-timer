@@ -1,0 +1,43 @@
+{
+  "name": "@cavallando/todoist-timer",
+  "version": "1.0.0",
+  "description": "A Todoist extension that allows you to track time spent on tasks.",
+  "main": "build/server.js",
+  "scripts": {
+    "start": "node ./build/server.js",
+    "dev": "ts-node-dev --respawn --exit-child src/server.ts",
+    "build": "tsc",
+    "prisma:init": "prisma init",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:deploy": "prisma migrate deploy"
+  },
+  "keywords": [],
+  "author": "Michael Cavallaro <michaelcavallaro03@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.7",
+    "@types/express": "^4.17.12",
+    "@types/humanize-duration": "^3.27.4",
+    "@types/node": "12",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@doist/todoist-api-typescript": "^3.0.3",
+    "@doist/ui-extensions-core": "^4.2.0",
+    "@prisma/client": "3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "express": "^4.17.1",
+    "humanize-duration": "^3.32.1",
+    "prettier": "^2.2.1",
+    "prisma": "3",
+    "type-fest": "4.12.0"
+  }
+}
