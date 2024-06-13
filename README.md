@@ -20,8 +20,8 @@ It is accessible via https://todoist-timer.mike.fun or https://todoist-integrati
 
 ## TODO
 
-- [] Setup Webhooks to automatically stop a timer when completed, possibly allow this as a Settings Extension
-- [] Add Icons to README and App
-- [] Decide on silly name for this
-- [] Rename Fly.io configuration to new name
-- [] Prepare for Open Source
+- [ ] Setup Webhooks to automatically stop a timer when completed, possibly allow this as a Settings Extension
+- [ ] Add Icons to README and App
+- [ ] Decide on silly name for this
+- [ ] Rename Fly.io configuration to new name
+- [ ] Prepare for Open Source
