@@ -1,4 +1,8 @@
-# Todoist Timer Integration
+# Todoist Timer Integration [![Continuous Deployment](https://github.com/Cavallando/todoist-timer/actions/workflows/cd.yml/badge.svg)](https://github.com/Cavallando/todoist-timer/actions/workflows/cd.yml)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/Cavallando)
+
+## [Quick Install](https://app.todoist.com/app/install/28183_9f2d5d282ea6a000f3cc9d7f)
 
 ## Usage
 
