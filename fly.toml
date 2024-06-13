@@ -8,6 +8,9 @@ primary_region = 'ord'
 
 [build]
 
+[deploy]
+  release_command = "bash -c 'node_modules/.bin/prisma migrate deploy'"
+
 [http_service]
   internal_port = 3000
   force_https = true
