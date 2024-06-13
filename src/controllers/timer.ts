@@ -1,9 +1,8 @@
 import { DoistCardRequest } from "@doist/ui-extensions-core";
 import { Request, Response } from "express";
 
-import { Bridge } from "../helpers";
-import { StartTimerView } from "../views/start-timer";
-import { StopTimerView } from "../views/stop-timer";
+import { Bridge } from "helpers";
+import { StartTimerView, StopTimerView } from "views";
 
 export const StartTimerController = async function (
   request: Request,

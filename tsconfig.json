@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "sourceMap": false,
     "outDir": "build",
     "strict": false,
     "lib": ["esnext"],
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "views": ["src/views"],
+      "controllers": ["src/controllers"],
+      "app": ["src/app"],
+      "helpers": ["src/helpers"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]

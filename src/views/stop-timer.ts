@@ -2,8 +2,8 @@ import { TodoistApi } from "@doist/todoist-api-typescript";
 import { DoistCardAction, DoistCardBridge } from "@doist/ui-extensions-core";
 import humanizeDuration from "humanize-duration";
 import { Request } from "express";
-import { prisma } from "../app";
-import { Bridge } from "../helpers";
+import { prisma } from "app";
+import { Bridge } from "helpers";
 
 export const StopTimerView = async (
   action: DoistCardAction,

@@ -1,7 +1,7 @@
 import { DoistCard, DoistCardAction } from "@doist/ui-extensions-core";
-import { prisma } from "../app";
+import { prisma } from "app";
 import humanizeDuration from "humanize-duration";
-import { Card } from "../helpers";
+import { Card } from "helpers";
 
 export const InitialView = async function (
   action: DoistCardAction

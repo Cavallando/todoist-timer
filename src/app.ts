@@ -4,7 +4,7 @@ import {
   SettingsController,
   StartTimerController,
   StopTimerController,
-} from "./controllers";
+} from "controllers";
 
 export const prisma = new PrismaClient();
 export const app = express();

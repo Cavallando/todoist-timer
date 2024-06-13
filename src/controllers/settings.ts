@@ -1,6 +1,6 @@
 import { DoistCardRequest } from "@doist/ui-extensions-core";
 import { Request, Response } from "express";
-import { SettingsInitialView, SettingsSubmitView } from "../views/settings";
+import { SettingsInitialView, SettingsSubmitView } from "views";
 
 export const SettingsController = async function (
   request: Request,

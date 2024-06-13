@@ -6,9 +6,9 @@ import {
   TextBlock,
   ToggleInput,
 } from "@doist/ui-extensions-core";
-import { prisma } from "../app";
+import { prisma } from "app";
 import { Request } from "express";
-import { Bridge } from "../helpers";
+import { Bridge } from "helpers";
 
 export const SettingsInitialView = async (
   request: Request
