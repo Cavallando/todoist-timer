@@ -1,0 +1,17 @@
+name: Continuous Integration
+on:
+  pull_request:
+
+jobs:
+  build:
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
