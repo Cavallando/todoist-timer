@@ -4,6 +4,10 @@
 
 ## [Quick Install](https://app.todoist.com/app/install/28183_9f2d5d282ea6a000f3cc9d7f)
 
+## Showcase
+
+![Todoist Timer Showcase](./docs/img/showcase.gif)
+
 ## Usage
 
 The Todoist Timer Integration is a Todoist UI Extension that offers the following functionality:
