@@ -12,8 +12,24 @@
 
 The Todoist Timer Integration is a Todoist UI Extension that offers the following functionality:
 
-- `/timers/start`: Starts a Timer and posts a comment on the Task
-- `/timers/stop`: Stops a Timer and posts a comment on the Task
+### Start Timer
+
+Starts a Timer for a given Task or Subtask. Once a Timer has been started, a comment is added to the Task for future reference. This feature can be disabled in the Extension's Settings. **Note:** The lapsed time is not currently displayed until the timer has been stopped.
+
+### Stop Timer
+
+Stops an active Timer on a given Task or Subtask. Once a Timer has been stopped, the Task is automatically closed and a comment is added to the Task showing the duration of the Timer. Auto-Closing and comments can be disabled in the Extension's Settings.
+
+### Settings
+
+Right now the extension supports two settings:
+
+- **Automatically close task when stopping timer**:
+  - Default: `enabled`
+  - Behavior: When enabled, tasks are automatically completeted when the Timer is stopped
+- **Track timer updates with comments**:
+  - Default: `enabled`
+  - Behavior: When enabled, comments are added to tasks automatically when the Timer is started or stopped
 
 ## Local Development
 
@@ -32,4 +48,3 @@ It is accessible via https://todoist-timer.mike.fun or https://todoist-integrati
 - [ ] Add Icons to README and App
 - [ ] Decide on silly name for this
 - [ ] Rename Fly.io configuration to new name
-- [ ] Prepare for Open Source
