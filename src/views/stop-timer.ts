@@ -18,7 +18,7 @@ export const StopTimerView = async (
     }
 
     const existingTimer = await prisma.timer.findUnique({
-      where: { task_id: action.params?.sourceId as string },
+      where: { task_id: `${action.params?.sourceId}` as string },
       rejectOnNotFound: false,
       include: {
         user: true,

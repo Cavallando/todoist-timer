@@ -8,7 +8,7 @@ export const InitialView = async function (
 ): Promise<DoistCard> {
   const card = new DoistCard();
   const existingTimer = await prisma.timer.findUnique({
-    where: { task_id: action.params?.sourceId as string },
+    where: { task_id: `${action.params?.sourceId}` as string },
     rejectOnNotFound: false,
   });
 

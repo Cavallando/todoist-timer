@@ -18,7 +18,7 @@ export const StartTimerView = async (
 
     await prisma.timer.upsert({
       where: {
-        task_id: action.params.sourceId as string,
+        task_id: `${action.params.sourceId}` as string,
       },
       update: {
         user: {
@@ -32,7 +32,7 @@ export const StartTimerView = async (
         },
       },
       create: {
-        task_id: action.params.sourceId as string,
+        task_id: `${action.params.sourceId}` as string,
         started_at: new Date(),
         user: {
           connectOrCreate: {
