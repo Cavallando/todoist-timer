@@ -1,63 +1,27 @@
-This is my Express + TypeScript + Prisma starter template.
-
-## Tech stack
-
-- Express
-- TypeScript
-- Prisma
-- ESLint
-- Prettier
-- Jest
-- SuperTest
+# Todoist Timer Integration
 
 ## Usage
 
-1. install packages
+The Todoist Timer Integration is a Todoist UI Extension that offers the following functionality:
 
-```
-yarn
-```
+- `/timers/start`: Starts a Timer and posts a comment on the Task
+- `/timers/stop`: Stops a Timer and posts a comment on the Task
 
-2. prisma init
+## Local Development
 
-```
-yarn prisma:init
-```
+1. `yarn install`
+2. `yarn dev` or `docker compose up -d --build`
 
-3. setting .env and schema.prisma
+## Deployment
 
-```
-DATABASE_URL=****************
-```
+The Todoist Timer Integration is hosted on Fly.io with a PostgreSQL Database.
 
-Please refer to [prisma document](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases/connect-your-database-typescript-postgres) (Connect your database).
+It is accessible via https://todoist-timer.mike.fun or https://todoist-integration.fly.dev.
 
-4. prisma migrate
+## TODO
 
-```
-yarn prisma:migrate
-```
-
-5. start server (development)
-
-```
-yarn dev
-```
-
-6. test
-
-```
-yarn test
-```
-
-7. build
-
-```
-yarn build
-```
-
-8. start server
-
-```
-yarn start
-```
+- [] Setup Webhooks to automatically stop a timer when completed, possibly allow this as a Settings Extension
+- [] Add Icons to README and App
+- [] Decide on silly name for this
+- [] Rename Fly.io configuration to new name
+- [] Prepare for Open Source
